@@ -1,0 +1,24 @@
+{
+  "RequestType": "CoPersonRoles",
+  "Version": "1.0",
+  "CoPersonRoles": [
+     {
+     "Version": "1.0",
+     "Person": {
+        "Type": "CO",
+        "Identifier": {
+           "Type": "epuid",
+           "Id": "toBeReplaced"
+        }
+     },
+     "Cou": {
+        "CoId": "2",
+        "Name": "vo.example.org"
+     },
+     "Affiliation": "member",
+     "Status": "Active",
+     "ValidFrom": "2024-03-16 11:19:38",
+     "ValidThrough": "2024-04-16 11:19:38"
+     }
+  ]
+}
