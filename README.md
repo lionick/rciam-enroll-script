@@ -38,6 +38,8 @@ Replace the following keys to the `config.json` file:
 {
   "api_base_url": "https://your-api-base-url.com",
   "cou_name": "vo.example.org",
+  "start_date": "2024-04-01 00:00:00",
+  "end_date": "2024-05-01 00:00:00",
   "username": "example-client",
   "password": "veryverysecret"
 }
