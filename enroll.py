@@ -2,8 +2,17 @@ import csv
 import json
 import requests
 
-# Define your API base URL
-VO_API_BASE_URL = "https://your-api-base-url.com"
+# Load configuration from config.json
+with open("config.json") as f:
+    config = json.load(f)
+
+# Define API base URL and authentication credentials
+VO_API_BASE_URL = config["api_base_url"]
+USERNAME = config["username"]
+PASSWORD = config["password"]
+COU_NAME = config["cou_name"]
+VALID_FROM = config["start_date"]
+VALID_THROUGH = config["end_date"]
 
 # Function to make the POST request for each epuid
 def make_request(epuid):
@@ -13,11 +22,14 @@ def make_request(epuid):
     
     # Replace placeholder with epuid from CSV file
     data["CoPersonRoles"][0]["Person"]["Identifier"]["Id"] = epuid
+    data["CoPersonRoles"][0]["Cou"]["Name"] = COU_NAME
+    data["CoPersonRoles"][0]["ValidFrom"] = VALID_FROM
+    data["CoPersonRoles"][0]["ValidThrough"] = VALID_THROUGH
     
     # Make POST request
     response = requests.post(
         f"{VO_API_BASE_URL}.json",
-        auth=("example-client", "veryverysecret"),
+        auth=(USERNAME, PASSWORD),
         json=data,
         headers={"Content-Type": "application/json"}
     )

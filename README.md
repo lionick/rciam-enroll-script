@@ -32,11 +32,16 @@ pip install -r requirements.txt
 ```
 
 ### 5. Replace Placeholder Values
-Replace the following placeholder values in the Python script (`enroll.py`) with your actual values:
+Replace the following keys to the `config.json` file:
 
-- `https://your-api-base-url.com`: Replace this with the base URL of your API.
-- `example-client`: Replace with your API client username.
-- `veryverysecret`: Replace with your API client password.
+```json
+{
+  "api_base_url": "https://your-api-base-url.com",
+  "cou_name": "vo.example.org",
+  "username": "example-client",
+  "password": "veryverysecret"
+}
+```
 
 ### 6. Provide JSON Template
 Ensure that you have a JSON template file named `add.json` in the same directory as the script. This JSON file should contain the template for the POST request payload.

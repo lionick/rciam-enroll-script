@@ -1,0 +1,8 @@
+{
+  "api_base_url": "https://your-api-base-url.com",
+  "cou_name": "vo.example.org",
+  "start_date": "2024-04-01 00:00:00",
+  "end_date": "2024-05-01 23:59:59",
+  "username": "example-client",
+  "password": "veryverysecret"
+}
